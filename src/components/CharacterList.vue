@@ -19,7 +19,7 @@ export default {
 
     <div class="row row-cols-2 row-cols-md-4 g-3">
         <div class="col" v-for="character in store.characters" :key="character.id">
-            <CharacterCard :character="character.name" />
+            <CharacterCard :character="character" />
         </div>
     </div>
 </template>
