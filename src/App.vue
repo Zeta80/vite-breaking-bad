@@ -3,12 +3,14 @@ import axios from "axios";
 import { store } from "./store";
 import AppHeader from './components/AppHeader.vue';
 import CharactersList from './components/CharacterList.vue';
+import AppLoader from "./components/AppLoading.vue";
 
 
 export default {
   components: {
     AppHeader,
-    CharactersList
+    CharactersList,
+    AppLoader
   },
 
   data() {
@@ -18,11 +20,11 @@ export default {
   },
 
   created() {
-
+    this.store.loading = true;
     axios.get("https://www.breakingbadapi.com/api/characters").then((resp) => {
       this.store.characters = resp.data;
       console.log(resp.data);
-
+      this.store.loading = false;
     });
   }
 }
@@ -32,7 +34,8 @@ export default {
 <template>
   <AppHeader />
   <div class="container">
-    <CharactersList />
+    <AppLoader v-if="store.loading" />
+    <CharactersList v-else />
   </div>
 
 </template>
