@@ -1,0 +1,7 @@
+@use "./partials/variables" as *;
+
+@import "node_modules/bootstrap/scss/bootstrap";
+
+img {
+    max-width: 100%;
+}
