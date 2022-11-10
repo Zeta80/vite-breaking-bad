@@ -25,7 +25,7 @@ header {
     top: 0;
     left: 0;
     background-image: linear-gradient(to bottom right, #16191b, #394551a1);
-    border: 1px solid black;
+    border-bottom: 1px solid black;
 
     h1 {
         color: white;

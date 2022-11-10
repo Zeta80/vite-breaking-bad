@@ -38,8 +38,8 @@ export default {
 
     .wrapper {
         width: 90%;
-        margin: $header_height auto;
-        padding-top: 40px;
+        margin: $header_height auto 50px;
+        padding: 40px 0;
 
         .found-characters {
             width: 100%;
