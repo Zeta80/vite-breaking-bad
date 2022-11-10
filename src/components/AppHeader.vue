@@ -6,7 +6,12 @@ export default {
 
 <template>
     <header>
-        <h1 class=" text-start header-title">BREAKING BAD</h1>
+        <h1 class=" text-start header-title mb-4">Breaking Bad Api</h1>
+        <div class="container select-bar">
+            <select>
+                <option value="0">Select category</option>
+            </select>
+        </div>
     </header>
 </template>
 
