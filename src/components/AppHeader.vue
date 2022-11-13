@@ -1,6 +1,12 @@
 <script>
+import { store } from "../store";
 export default {
-    name: "AppHeader"
+    name: "AppHeader",
+    data() {
+        return {
+            store,
+        }
+    }
 }
 </script>
 
@@ -8,8 +14,9 @@ export default {
     <header>
         <h1 class=" text-start header-title mb-4">Breaking Bad Api</h1>
         <div class="container select-bar">
-            <select>
-                <option value="0">Select category</option>
+            <select @change="$emit('performSearch')" v-model="store.searchCategory">
+                <option value="Breaking Bad">Breaking Bad</option>
+                <option value="Better Call Saul">Better call Saul</option>
             </select>
         </div>
     </header>
